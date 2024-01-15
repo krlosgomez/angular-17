@@ -1,0 +1,19 @@
+<div>
+	<h1>Hola bebes!</h1>
+	<h2>{{ title }}</h2>
+	<ul>
+		@for (item of array(); track $index) {
+		<li>{{ $index }}. {{ item.name }}</li>
+		}
+	</ul>
+</div>
+<hr />
+<h2>{{ 'hola'.repeat(4) }}</h2>
+<p>la suma de 3 + 3 es {{ 3 + 3 }}</p>
+<p>Hola soy {{ name() }} y mi edad es {{ 18 }}</p>
+<hr />
+<p>(input)</p>
+<input type="text" [value]="person.name" (input)="changeHandler($event)" />
+<hr />
+<p>Signals</p>
+<p>{{ name() }}</p>
